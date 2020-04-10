@@ -1,7 +1,7 @@
 {
     "name": "gopaljha/laravel-datadog",
     "description": "A simple package to wrap DataDog API for Timeseries metrics",
-    "type": "composer-plugin, package",
+    "type": "package",
     "require": {
         "php": ">=5.6",
         "laravel/framework": "5.3.*"
