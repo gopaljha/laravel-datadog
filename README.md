@@ -1,4 +1,4 @@
-# Laravel DataDog
+# Laravel DataDog 
 
 A simple package to use DataDog Series Metric using their API via TCP 
 
