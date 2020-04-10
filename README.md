@@ -21,6 +21,13 @@ Pull in the package using Composer
 composer require gopaljha/laravel-datadog
 ```
 
+```php
+$providers = [
+    GopalJha\LaravelDataDog\LaravelDataDogServiceProvider::class,
+]
+```
+
+
 Publish the config file 
 
 ```php
