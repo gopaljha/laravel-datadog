@@ -6,7 +6,7 @@ use GopalJha\LaravelDataDog\Jobs\DataDogIncrement;
 
 class DataDog
 {
-    public function increment($metric, array $tags = [], $host = null)
+    public static function increment($metric, array $tags = [], $host = null)
     {
         dispatch(new DataDogIncrement($metric, $tags, $host));
     }

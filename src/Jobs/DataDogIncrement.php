@@ -6,6 +6,8 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use GopalJha\LaravelDataDog\DataDogClient;
+
 // use Illuminate\Foundation\Bus\Dispatchable;
 
 class DataDogIncrement implements ShouldQueue
@@ -34,6 +36,7 @@ class DataDogIncrement implements ShouldQueue
      */
     public function handle()
     {
-        app('datadogclient')->increment($this->metric, $this->tags, $this->host);
+        $datadogclient = new DataDogClient();
+        $datadogclient->increment($this->metric, $this->tags, $this->host);
     }
 }
