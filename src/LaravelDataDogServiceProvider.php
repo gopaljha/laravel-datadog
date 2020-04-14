@@ -22,10 +22,6 @@ class LaravelDataDogServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-
-        // Register the Timezone alias
-        AliasLoader::getInstance()->alias('DataDog', \GopalJha\LaravelDataDog\Facades\DataDog::class);
-
         // Allow config publish
         $this->publishes([
             __DIR__ . '/config/datadog.php' => config_path('datadog.php'),

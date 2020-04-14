@@ -22,10 +22,7 @@
         "laravel": {
             "providers": [
                 "GopalJha\\LaravelDataDog\\LaravelDataDogServiceProvider"
-            ],
-            "aliases": {
-                "Debugbar": "GopalJha\\LaravelDataDog\\Facades\\DataDog"
-            }
+            ]
         }
     },
     "autoload": {

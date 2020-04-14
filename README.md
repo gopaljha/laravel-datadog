@@ -1,3 +1,10 @@
+[![GitHub Issues](https://img.shields.io/github/issues/GopalJha/laravel-datadog)](https://packagist.org/packages/gopaljha/laravel-datadog)
+[![GitHub Forks](https://img.shields.io/github/forks/GopalJha/laravel-datadog)](https://packagist.org/packages/gopaljha/laravel-datadog)
+[![GitHub Stars](https://img.shields.io/github/stars/GopalJha/laravel-datadog)](https://packagist.org/packages/gopaljha/laravel-datadog)
+[![GitHub License](https://img.shields.io/github/license/GopalJha/laravel-datadog)](https://github.com/GopalJha/laravel-datadog/blob/master/LICENSE)
+[![Twitter](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Fgopalpsdjha89)](https://twitter.com/gopalpsdjha89)
+
+
 # Laravel DataDog
 
 A simple package to use DataDog Series Metric using their API via TCP 
@@ -49,10 +56,10 @@ Set your DataDog API key in your `.env` file using the key `DATADOG_KEY`.
 A powerful feature of DataDog is the ability to tag things.
 
 ```php
-\DataDog::increment('app.pageview', ['my:tag:one', 'my:tag:two']);
+\DataDog::increment('app.pageview', ['tag' => 'one', 'tag' => 'two']);
 ```
 
 You can also send a custom host if you require.
 ```php
-\DataDog::increment('app.pageview', ['my:tag:one', 'my:tag:two'], 'my.host.com');
+\DataDog::increment('app.pageview', ['tag' => 'one', 'tag' => 'two'], 'example.com');
 ```
