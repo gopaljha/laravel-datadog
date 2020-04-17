@@ -42,6 +42,9 @@ class DataDogClient
                     ]
                 );
             } catch (\Exception $th) {
+                $this->writeLog("Metrix: " . json_encode($series));
+                $this->writeLog("Parent Error: " . json_encode($th->getMessage()));
+                
                 try {
                     $this->client->request(
                         "POST",
@@ -52,10 +55,10 @@ class DataDogClient
                             ],
                         ]
                     );
-                } catch (\Throwable $th) {
-                    $this->writeLog("Child Error: " . json_encode($th->getMessage()));
+                } catch (\Exception $td) {
+                    $this->writeLog("Metrix: " . json_encode($series));
+                    $this->writeLog("Child Error: " . json_encode($td->getMessage()));
                 }
-                $this->writeLog("Parent Error: " . json_encode($th->getMessage()));
             }
         }, 500);
     }
